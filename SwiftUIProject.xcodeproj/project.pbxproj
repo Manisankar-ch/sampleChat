@@ -18,6 +18,7 @@
 		3CBF88942BE19DD8002D3B8C /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF88932BE19DD8002D3B8C /* CustomInputField.swift */; };
 		3CBF889A2BE1A4B8002D3B8C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF88992BE1A4B7002D3B8C /* Colors.xcassets */; };
 		3CE92B842BE2CA5E0031131E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE92B832BE2CA5E0031131E /* LoginView.swift */; };
+		3CE92B882BE2D7CA0031131E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE92B872BE2D7CA0031131E /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3CBF88932BE19DD8002D3B8C /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		3CBF88992BE1A4B7002D3B8C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3CE92B832BE2CA5E0031131E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3CE92B872BE2D7CA0031131E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				3CBF88932BE19DD8002D3B8C /* CustomInputField.swift */,
 				3CE92B832BE2CA5E0031131E /* LoginView.swift */,
+				3CE92B872BE2D7CA0031131E /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				3CA312542BD44448008A02EA /* ContentView.swift in Sources */,
 				3CA312522BD44448008A02EA /* SwiftUIProjectApp.swift in Sources */,
 				3CE92B842BE2CA5E0031131E /* LoginView.swift in Sources */,
+				3CE92B882BE2D7CA0031131E /* SignUpView.swift in Sources */,
 				3C4EF0932BD9A9C000B528D2 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
