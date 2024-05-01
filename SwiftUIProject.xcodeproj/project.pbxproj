@@ -19,6 +19,7 @@
 		3CBF889A2BE1A4B8002D3B8C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF88992BE1A4B7002D3B8C /* Colors.xcassets */; };
 		3CE92B842BE2CA5E0031131E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE92B832BE2CA5E0031131E /* LoginView.swift */; };
 		3CE92B882BE2D7CA0031131E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE92B872BE2D7CA0031131E /* SignUpView.swift */; };
+		3CE92B8B2BE2E0800031131E /* SampleChatUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE92B8A2BE2E0800031131E /* SampleChatUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		3CBF88992BE1A4B7002D3B8C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3CE92B832BE2CA5E0031131E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3CE92B872BE2D7CA0031131E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3CE92B8A2BE2E0800031131E /* SampleChatUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleChatUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		3CBF88962BE1A45C002D3B8C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3CE92B8A2BE2E0800031131E /* SampleChatUserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				3CA312542BD44448008A02EA /* ContentView.swift in Sources */,
 				3CA312522BD44448008A02EA /* SwiftUIProjectApp.swift in Sources */,
 				3CE92B842BE2CA5E0031131E /* LoginView.swift in Sources */,
+				3CE92B8B2BE2E0800031131E /* SampleChatUserDefaults.swift in Sources */,
 				3CE92B882BE2D7CA0031131E /* SignUpView.swift in Sources */,
 				3C4EF0932BD9A9C000B528D2 /* NetworkMonitor.swift in Sources */,
 			);
