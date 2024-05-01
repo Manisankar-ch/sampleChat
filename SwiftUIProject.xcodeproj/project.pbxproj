@@ -16,6 +16,8 @@
 		3CA3126D2BD44449008A02EA /* SwiftUIProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3126C2BD44449008A02EA /* SwiftUIProjectUITests.swift */; };
 		3CA3126F2BD44449008A02EA /* SwiftUIProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3126E2BD44449008A02EA /* SwiftUIProjectUITestsLaunchTests.swift */; };
 		3CBF88942BE19DD8002D3B8C /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF88932BE19DD8002D3B8C /* CustomInputField.swift */; };
+		3CBF889A2BE1A4B8002D3B8C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF88992BE1A4B7002D3B8C /* Colors.xcassets */; };
+		3CE92B842BE2CA5E0031131E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE92B832BE2CA5E0031131E /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		3CA3126C2BD44449008A02EA /* SwiftUIProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectUITests.swift; sourceTree = "<group>"; };
 		3CA3126E2BD44449008A02EA /* SwiftUIProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3CBF88932BE19DD8002D3B8C /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		3CBF88992BE1A4B7002D3B8C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3CE92B832BE2CA5E0031131E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +110,13 @@
 		3CA312502BD44448008A02EA /* SwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
+				3CBF88962BE1A45C002D3B8C /* Utils */,
 				3CBF88952BE19DED002D3B8C /* Views */,
 				3C4EF0912BD9A99C00B528D2 /* NetworkConnectivity */,
 				3CA312512BD44448008A02EA /* SwiftUIProjectApp.swift */,
 				3CA312532BD44448008A02EA /* ContentView.swift */,
 				3CA312552BD44449008A02EA /* Assets.xcassets */,
+				3CBF88992BE1A4B7002D3B8C /* Colors.xcassets */,
 				3CA312572BD44449008A02EA /* Preview Content */,
 			);
 			path = SwiftUIProject;
@@ -145,8 +151,16 @@
 			isa = PBXGroup;
 			children = (
 				3CBF88932BE19DD8002D3B8C /* CustomInputField.swift */,
+				3CE92B832BE2CA5E0031131E /* LoginView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3CBF88962BE1A45C002D3B8C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CBF889A2BE1A4B8002D3B8C /* Colors.xcassets in Resources */,
 				3CA312592BD44449008A02EA /* Preview Assets.xcassets in Resources */,
 				3CA312562BD44449008A02EA /* Assets.xcassets in Resources */,
 			);
@@ -282,6 +297,7 @@
 				3CBF88942BE19DD8002D3B8C /* CustomInputField.swift in Sources */,
 				3CA312542BD44448008A02EA /* ContentView.swift in Sources */,
 				3CA312522BD44448008A02EA /* SwiftUIProjectApp.swift in Sources */,
+				3CE92B842BE2CA5E0031131E /* LoginView.swift in Sources */,
 				3C4EF0932BD9A9C000B528D2 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
