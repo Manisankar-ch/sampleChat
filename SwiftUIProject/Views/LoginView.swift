@@ -55,9 +55,9 @@ struct LoginView: View {
                     .frame(maxWidth: .infinity, maxHeight: 2)
             }
             CustomInputField(userInput: $email, isRightIcon: true,
-                             fieldLabelName: "Email")
+                             fieldLabelName: "Email", placeHolderText: "Enter Email")
             CustomInputField(userInput: $password, isRightIcon: true, isPassword: true,
-                             fieldLabelName: "Password")
+                             fieldLabelName: "Password", placeHolderText: "Enter Password")
             .padding(.top, 20)
             Spacer()
             Button(action: loginAction) {

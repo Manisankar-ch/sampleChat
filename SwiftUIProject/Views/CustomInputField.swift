@@ -6,6 +6,7 @@ struct CustomInputField: View {
     var isRightIcon: Bool = false
     var isPassword: Bool = false
     var fieldLabelName: String = ""
+    var placeHolderText: String
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,9 +19,9 @@ struct CustomInputField: View {
                 if isRightIcon {
                     if isPassword {
                         if isSecure {
-                            SecureField("Enter Password", text: $userInput)
+                            SecureField(placeHolderText, text: $userInput)
                         } else {
-                            TextField("Enter Password", text: $userInput)
+                            TextField(placeHolderText, text: $userInput)
                         }
                         Button(action: {
                             isSecure.toggle()
@@ -29,11 +30,13 @@ struct CustomInputField: View {
                                 .foregroundColor(.primary)
                         }
                     } else {
-                        TextField("Enter Email", text: $userInput)
+                        TextField(placeHolderText, text: $userInput)
                         Spacer() // Pushes the email icon to the right corner
                         Image(systemName: "envelope")
                             .foregroundColor(.primary)
                     }
+                } else {
+                    TextField(placeHolderText, text: $userInput)
                 }
             }
             .padding(.horizontal)
@@ -47,5 +50,5 @@ struct CustomInputField: View {
 }
 
 #Preview {
-    CustomInputField(userInput: .constant(""))
+    CustomInputField(userInput: .constant(""), placeHolderText: "")
 }
