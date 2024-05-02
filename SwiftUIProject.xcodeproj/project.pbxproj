@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C32BDA82BE43C1B00FD3D91 /* LoginOrSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C32BDA72BE43C1B00FD3D91 /* LoginOrSignUpView.swift */; };
 		3C4EF0932BD9A9C000B528D2 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EF0922BD9A9C000B528D2 /* NetworkMonitor.swift */; };
 		3CA312522BD44448008A02EA /* SwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA312512BD44448008A02EA /* SwiftUIProjectApp.swift */; };
 		3CA312542BD44448008A02EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA312532BD44448008A02EA /* ContentView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C32BDA72BE43C1B00FD3D91 /* LoginOrSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOrSignUpView.swift; sourceTree = "<group>"; };
 		3C4EF0922BD9A9C000B528D2 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3CA3124E2BD44448008A02EA /* SwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA312512BD44448008A02EA /* SwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectApp.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				3CBF88932BE19DD8002D3B8C /* CustomInputField.swift */,
 				3CE92B832BE2CA5E0031131E /* LoginView.swift */,
+				3C32BDA72BE43C1B00FD3D91 /* LoginOrSignUpView.swift */,
 				3CE92B872BE2D7CA0031131E /* SignUpView.swift */,
 			);
 			path = Views;
@@ -305,6 +308,7 @@
 				3CA312522BD44448008A02EA /* SwiftUIProjectApp.swift in Sources */,
 				3CE92B842BE2CA5E0031131E /* LoginView.swift in Sources */,
 				3CE92B8B2BE2E0800031131E /* SampleChatUserDefaults.swift in Sources */,
+				3C32BDA82BE43C1B00FD3D91 /* LoginOrSignUpView.swift in Sources */,
 				3CE92B882BE2D7CA0031131E /* SignUpView.swift in Sources */,
 				3C4EF0932BD9A9C000B528D2 /* NetworkMonitor.swift in Sources */,
 			);
