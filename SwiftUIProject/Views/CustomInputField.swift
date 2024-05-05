@@ -12,7 +12,7 @@ struct CustomInputField: View {
         VStack(alignment: .leading) {
             Text(fieldLabelName)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundColor(Color("LabelColor"))
+                .foregroundColor(Color.labelText)
                 .padding(.horizontal)
             
             HStack {

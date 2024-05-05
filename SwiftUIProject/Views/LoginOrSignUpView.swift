@@ -14,9 +14,6 @@ struct LoginOrSignUpView: View {
         
     }
     
-    func actionOnLogin(){
-        
-    }
     var body: some View {
         VStack {
             
@@ -74,9 +71,6 @@ struct LoginOrSignUpView: View {
                     Text("Login")
                         .font(.system(size: 14, weight: .bold))
                         .foregroundStyle(Color.white)
-                        .onTapGesture {
-                            actionOnLogin()
-                        }
                 }
             }
             .padding(.top, 46)

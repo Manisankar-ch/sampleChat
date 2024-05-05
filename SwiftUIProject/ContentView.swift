@@ -18,13 +18,23 @@ struct ContentView: View {
     let networkMonitor = try! NetworkMonitor()
     
     var body: some View {
-        LoginView()
+        VStack {
+            if #available(iOS 16.0, *) {
+                NavigationStack {
+                    LoginOrSignUpView()
+                }
+            } else {
+                NavigationView {
+                    LoginOrSignUpView()
+                }
+            }
+        }
         .onReceive(NotificationCenter.default.publisher(for: .flagsChanged)) { _ in
             DispatchQueue.main.async {
                 self.isInternetConnected = self.networkMonitor.isConnectedToNetwork
             }
         }
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
