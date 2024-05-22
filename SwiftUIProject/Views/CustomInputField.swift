@@ -7,12 +7,13 @@ struct CustomInputField: View {
     var isPassword: Bool = false
     var fieldLabelName: String = ""
     var placeHolderText: String
+    var errorText: String = ""
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(fieldLabelName)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundColor(Color.labelText)
+                .foregroundColor(!errorText.isEmpty ? .red : .labelText)
                 .padding(.horizontal)
             
             HStack {
@@ -39,13 +40,18 @@ struct CustomInputField: View {
                     TextField(placeHolderText, text: $userInput)
                 }
             }
-            .padding(.horizontal)
             
             Rectangle()
                 .frame(height: 1)
-                .foregroundColor(.gray)
-                .padding(.horizontal)
+                .foregroundColor(!errorText.isEmpty ? .red : .gray)
+               
+            Text("\(errorText)")
+                .foregroundStyle(.red)
+                .border(Color.black)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
+
         }
+        .padding(.horizontal)
     }
 }
 
