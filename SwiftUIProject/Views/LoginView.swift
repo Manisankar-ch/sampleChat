@@ -11,13 +11,14 @@ struct LoginView: View {
     let images = ["FaceBook", "Google", "Apple"]
     @State var email: String = ""
     @State var password: String = ""
+    @State var navigateToDashBoard: Bool = false
     
     func actionOnForgotPassword() {
         
     }
     
     func loginAction() {
-        
+        navigateToDashBoard = true
     }
     
     func actionOnSocialMediaIcons(selectedIndex: Int) {
@@ -35,7 +36,7 @@ struct LoginView: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 50)
                         .padding(.top, 20)
-                    HStack(spacing: 0) { // Adjust spacing between images as needed
+                    HStack(spacing: 20) {
                         ForEach(Array(images.enumerated()), id: \.element) { index, imageName in
                             Image(imageName)
                                 .frame(width: 48, height: 48)
@@ -50,7 +51,7 @@ struct LoginView: View {
                             .frame(maxWidth: .infinity, maxHeight: 2)
                         Text("OR")
                             .fontWeight(.bold)
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color.appBlack)
                             .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
                         Rectangle()
                             .fill(LinearGradient(colors: [Color.gray.opacity(0.1), Color.gray], startPoint: .trailing, endPoint: .leading))
@@ -85,8 +86,17 @@ struct LoginView: View {
                     actionOnForgotPassword()
                 })
                 .padding(.bottom, 30)
+            if #available(iOS 16.0, *) {
+                Spacer()
+                    .navigationDestination(isPresented: $navigateToDashBoard) {
+                        BottomBarView()
+                            .navigationBarBackButtonHidden(true)
+                    }
+            } else {
+                // Fallback on earlier versions
+            }
         }
-    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
     }
 }
 
@@ -105,7 +115,7 @@ struct test: View {
                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
-        .border(Color.red)
+            .border(Color.red)
         }
     }
 }
