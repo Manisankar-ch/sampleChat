@@ -8,9 +8,11 @@ struct HomeView: View {
     @State var members: ChatroomList? = nil
     @State var isLoading: Bool = false
     var body: some View {
-        ScrollView {
+        
             VStack(spacing: 0) {
                 ProfileView()
+                ScrollView {
+               
                 if isLoading {
                     ProgressView()
                         .progressViewStyle(.circular)
@@ -97,7 +99,7 @@ struct ChatRoomListView: View {
                        .frame(width: screenWidth * 0.07, height: screenWidth * 0.07)
                        .foregroundColor(.white)
                        .padding(.all, 5)
-                       .background(Color.red)
+                       .background(Color.black)
                        .clipShape(Capsule())
                        .onTapGesture(perform: {
                            print("tapped")
