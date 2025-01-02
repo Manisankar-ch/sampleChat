@@ -25,7 +25,6 @@ struct BottomBarView: View {
                     Text("4")
                 }
             }
-            .safeAreaPadding(0)
             .tabViewStyle(.sidebarAdaptable)
         } else {
             TabView {
