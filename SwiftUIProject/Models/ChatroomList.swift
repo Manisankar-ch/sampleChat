@@ -8,7 +8,7 @@
 import Foundation
 
 struct ChatroomList: Codable {
-    let chatrooms: [Chatroom]
+    var chatrooms: [Chatroom]
     let statusList: [StatusView]
 }
 

@@ -9,51 +9,71 @@ struct HomeView: View {
     @State var isLoading: Bool = false
     var body: some View {
         
-            VStack(spacing: 0) {
-                ProfileView()
-                ScrollView {
-               
-                if isLoading {
-                    ProgressView()
-                        .progressViewStyle(.circular)
-                } else {
-                    if let statusList = members?.statusList {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                TopStatusView(status: StatusView(thumbnailUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg", id: "self", name: "Me", statusThumbnailUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg", isSeen: false), isSelf: true)
-                                ForEach(statusList, id: \.id) { status in
-                                    TopStatusView(status: status)
-                                }
+        VStack(spacing: 0) {
+            ProfileView()
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(.circular)
+            } else {
+                if let statusList = members?.statusList {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            TopStatusView(status: StatusView(thumbnailUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg", id: "self", name: "Me", statusThumbnailUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg", isSeen: false), isSelf: true)
+                            ForEach(statusList, id: \.id) { status in
+                                TopStatusView(status: status)
                             }
                         }
-                    }
-                    Spacer(minLength: 20)
-                    
-                    if let chatRooms = members?.chatrooms {
-                        ScrollView {
-                            VStack {
-                                Spacer()
-                                    .frame(height: 20)
-                                
-                                ForEach(chatRooms, id: \.id) { room in
-                                    ChatRoomListView(member: room)
-                                }
-                            }
-                            .background(Color.appWhite)
-                            .clipShape(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 40))
-                        }
-                    } else {
-                        Text("No chat rooms found")
                     }
                 }
-            }
-            
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .onAppear {
-                getRoomDetails()
+                Spacer(minLength: 20)
+                
+                if let chatRooms = members?.chatrooms {
+                    VStack {
+                        if #available(iOS 16.0, *) {
+                            NavigationStack {
+                                List {
+                                    
+                                    ForEach(Array(chatRooms.enumerated()), id: \.element.id) { (index, room) in
+                                        NavigationLink(destination: ChatRoomDetailView(member: room)) {
+
+                                            ChatRoomListView(member: room)
+                                        }
+                                        
+                                        .swipeActions {
+                                            Button(role: .destructive) {
+                                                members?.chatrooms.remove(at: index)
+                                            } label: {
+                                                Label("Delete", systemImage: "trash")
+                                            }
+                                            Button(role: .none) {
+                                                print("-----notification")
+                                            } label: {
+                                                Label("notification", systemImage: "bell")
+                                            }
+                                        }
+                                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                                    }
+                                    
+                                }
+                                
+                            }
+                        } else {
+                            // Fallback on earlier versions
+                        }
+                    }
+                    .background(Color.appWhite)
+                    .clipShape(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 40))
+                    
+                } else {
+                    Text("No chat rooms found")
+                }
             }
             Spacer()
                 .frame(height: 20)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .onAppear {
+            getRoomDetails()
         }
         .background(
             LinearGradient(colors: [Color.loginButtonGradient3, Color.white], startPoint: .top, endPoint: .bottom))
@@ -81,113 +101,59 @@ struct HomeView: View {
 
 
 struct ChatRoomListView: View {
-
+    
     var member: Chatroom
     @State private var offset: CGFloat = 0
-       @State private var showView: Bool = false
-
-
-
-       var body: some View {
-           let screenWidth = UIScreen.main.bounds.width
-           
-           ZStack {
-               // Background view (e.g., Archive/Delete action)
-               HStack {
-                   Spacer()
-                   Image(systemName: "bell")
-                       .frame(width: screenWidth * 0.07, height: screenWidth * 0.07)
-                       .foregroundColor(.white)
-                       .padding(.all, 5)
-                       .background(Color.black)
-                       .clipShape(Capsule())
-                       .onTapGesture(perform: {
-                           print("tapped")
-                       })
-                   Image(systemName: "trash.fill")
-                       .frame(width: screenWidth * 0.07, height: screenWidth * 0.07)
-                       .foregroundColor(.white)
-                       .padding(.all, 5)
-                       .background(Color.red)
-                       .clipShape(Capsule())
-                       .onTapGesture(perform: {
-                           print("tapped")
-                       })
-               }
-               .padding(.trailing, 20)
-               
-               // Foreground view (Swipable content)
-               HStack {
-                   AsyncImage(url: URL(string: member.thumbnailUrl)!) { image in
-                       image.resizable()
-                   } placeholder: {
-                       ProgressView()
-                   }
-                   .clipShape(Capsule())
-                   .frame(width: screenWidth * 0.15, height: screenWidth * 0.15)
-                   .padding(5)
-                   
-                   VStack(spacing: 0) {
-                       HStack {
-                           Text(member.name)
-                               .foregroundStyle(Color.gray)
-                               .frame(maxWidth: .infinity, alignment: .leading)
-                               .lineLimit(1)
-                               .font(.caption)
-                           Text(formatMessageDate(member.lastMessage.timestamp))
-                               .frame(maxWidth: .infinity, alignment: .trailing)
-                               .lineLimit(1)
-                               .font(.footnote)
-                       }
-                       .padding([.top, .horizontal], 5)
-                       
-                       HStack {
-                           Text(member.lastMessage.content)
-                               .frame(maxWidth: .infinity, alignment: .leading)
-                               .lineLimit(1)
-                               .font(.caption2)
-                           
-                           if member.unreadMessageCount > 0 {
-                               Text("\(member.unreadMessageCount)")
-                                   .font(.footnote)
-                                   .padding(6)
-                                   .background(Color.blue)
-                                   .clipShape(Circle())
-                           }
-                       }
-                       .padding([.bottom, .horizontal], 5)
-                   }
-               }
-               .background(Color.white)
-               .cornerRadius(10)
-               .shadow(radius: 2)
-               .offset(x: offset)
-               .gesture(
-                   DragGesture()
-                       .onChanged { value in
-                           if value.translation.width < 0 {
-                               offset = value.translation.width
-                           }
-                       }
-                       .onEnded { value in
-                           showView = false
-                           offset =  -(screenWidth * 0.4)
-//                           if value.translation.width > 100 {
-//                               showView = true
-//                               offset = screenWidth * 0.6
-//                           } else {
-//                               showView = false
-//                               offset = 0
-//                           }
-                       }
-               )
-               .animation(.easeInOut, value: offset)
-           }
-           .padding(.horizontal, 20)
-           .onTapGesture {
-               print("Tapped on \(member.name)")
-           }
-       }
+    @State private var showView: Bool = false
+    
+    
+    
+    var body: some View {
+        let screenWidth = UIScreen.main.bounds.width
+        // Foreground view (Swipable content)
+        HStack {
+            AsyncImage(url: URL(string: member.thumbnailUrl)!) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .clipShape(Capsule())
+            .frame(width: screenWidth * 0.15, height: screenWidth * 0.15)
+            .padding(5)
+            
+            VStack(spacing: 0) {
+                HStack {
+                    Text(member.name)
+                        .foregroundStyle(Color.gray)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .lineLimit(1)
+                        .font(.caption)
+                    Text(formatMessageDate(member.lastMessage.timestamp))
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .lineLimit(1)
+                        .font(.footnote)
+                }
+                .padding([.top, .horizontal], 5)
+                
+                HStack {
+                    Text(member.lastMessage.content)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .lineLimit(1)
+                        .font(.caption2)
+                    
+                    if member.unreadMessageCount > 0 {
+                        Text("\(member.unreadMessageCount)")
+                            .font(.footnote)
+                            .padding(6)
+                            .background(Color.blue)
+                            .clipShape(Circle())
+                    }
+                }
+                .padding([.bottom, .horizontal], 5)
+            }
+        }
+        .background(Color.white)
+    }
     
     func formatMessageDate(_ dateString: String) -> String {
         let formatter = DateFormatter()
@@ -308,5 +274,26 @@ struct ProfileView: View {
         }
         .frame(maxWidth: .infinity)
         .padding()
+    }
+}
+
+
+struct ChatRoomDetailView: View {
+    var member: Chatroom
+    
+    var body: some View {
+        VStack {
+            Text("Chat Room Details")
+                .font(.title)
+                .padding()
+            
+            Text("Name: \(member.name)")
+                .font(.headline)
+            Text("Last Message: \(member.lastMessage.content)")
+                .font(.subheadline)
+            Spacer()
+        }
+        .padding()
+        .navigationTitle(member.name)
     }
 }
