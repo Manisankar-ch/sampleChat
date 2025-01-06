@@ -13,20 +13,23 @@
           "id": "msg1",
           "senderId": "user1",
           "content": "Hello everyone!",
-          "timestamp": "2024-12-21T10:00:00Z"
+          "timestamp": "2024-12-21T10:00:00Z",
+          "messageType": "text"
         },
         {
           "id": "msg2",
           "senderId": "user2",
           "content": "Hi Alice!",
-          "timestamp": "2024-12-21T10:01:00Z"
+          "timestamp": "2024-12-21T10:01:00Z",
+          "messageType": "text"
         }
       ],
       "lastMessage": {
         "id": "msg2",
         "senderId": "user2",
         "content": "Hi Alice!",
-        "timestamp": "2024-12-21T10:01:00Z"
+        "timestamp": "2024-12-21T10:01:00Z",
+        "messageType": "text"
       },
       "unreadMessageCount": 0,
       "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
@@ -42,16 +45,18 @@
       "messages": [
         {
           "id": "msg3",
-          "senderId": "user4",
+          "senderId": "user1",
           "content": "Are we ready for the presentation?",
-          "timestamp": "2024-12-21T09:30:00Z"
+          "timestamp": "2024-12-21T09:30:00Z",
+          "messageType": "text"
         }
       ],
       "lastMessage": {
         "id": "msg3",
-        "senderId": "user4",
+        "senderId": "user2",
         "content": "Are we ready for the presentation?",
-        "timestamp": "2024-12-21T09:30:00Z"
+        "timestamp": "2024-12-21T09:30:00Z",
+        "messageType": "text"
       },
       "unreadMessageCount": 3,
       "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"
@@ -69,20 +74,23 @@
             "id": "msg1",
             "senderId": "user1",
             "content": "Hello everyone!",
-            "timestamp": "2024-12-21T10:00:00Z"
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
           },
           {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-21T10:01:00Z"
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
           }
         ],
         "lastMessage": {
           "id": "msg2",
           "senderId": "user2",
           "content": "Hi Alice!",
-          "timestamp": "2024-12-21T10:01:00Z"
+          "timestamp": "2024-12-21T10:01:00Z",
+          "messageType": "text"
         },
         "unreadMessageCount": 1,
         "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
@@ -100,20 +108,23 @@
             "id": "msg1",
             "senderId": "user1",
             "content": "Hello everyone!",
-            "timestamp": "2024-12-21T10:00:00Z"
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
           },
           {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-21T10:01:00Z"
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
           }
         ],
         "lastMessage": {
           "id": "msg2",
           "senderId": "user2",
           "content": "Hi Alice!",
-          "timestamp": "2024-12-30T10:01:00Z"
+          "timestamp": "2024-12-30T10:01:00Z",
+          "messageType": "text"
         },
         "unreadMessageCount": 1,
         "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg",
@@ -131,20 +142,23 @@
             "id": "msg1",
             "senderId": "user1",
             "content": "Hello everyone!",
-            "timestamp": "2024-12-21T10:00:00Z"
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
           },
           {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-21T10:01:00Z"
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
           }
         ],
         "lastMessage": {
           "id": "msg2",
           "senderId": "user2",
           "content": "Hi Alice!",
-          "timestamp": "2024-12-28T10:01:00Z"
+          "timestamp": "2024-12-28T10:01:00Z",
+          "messageType": "text"
         },
         "unreadMessageCount": 0,
         "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
@@ -162,20 +176,121 @@
             "id": "msg1",
             "senderId": "user1",
             "content": "Hello everyone!",
-            "timestamp": "2024-12-21T10:00:00Z"
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text",
           },
           {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-21T10:01:00Z"
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg3",
+            "senderId": "user1",
+            "content": "Hello everyone!",
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg4",
+            "senderId": "user2",
+            "content": "Hi Alice!",
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg5",
+            "senderId": "user1",
+            "content": "Hello everyone!",
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg6",
+            "senderId": "user2",
+            "content": "Hi Alice!",
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "mss7",
+            "senderId": "user1",
+            "content": "Hello everyone!",
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg8",
+            "senderId": "user2",
+            "content": "Hi Alice!",
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg9",
+            "senderId": "user1",
+            "content": "Hello everyone!",
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg10",
+            "senderId": "user2",
+            "content": "Hi Alice!",
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg11",
+            "senderId": "user1",
+            "content": "Hello everyone!",
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg12",
+            "senderId": "user2",
+            "content": "Hi Alice!",
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg13",
+            "senderId": "user1",
+            "content": "Hello everyone!",
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg14",
+            "senderId": "user2",
+            "content": "Hi Alice!",
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "mss15",
+            "senderId": "user1",
+            "content": "Hello everyone!",
+            "timestamp": "2024-12-21T10:00:00Z",
+            "messageType": "text"
+          },
+          {
+            "id": "msg16",
+            "senderId": "user2",
+            "content": "Hi Alice!",
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
           }
         ],
         "lastMessage": {
           "id": "msg2",
           "senderId": "user2",
           "content": "Hi Alice!",
-          "timestamp": "2024-12-21T10:01:00Z"
+          "timestamp": "2024-12-21T10:01:00Z",
+          "messageType": "text"
         },
         "unreadMessageCount": 0,
         "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
@@ -191,16 +306,18 @@
         "messages": [
           {
             "id": "msg3",
-            "senderId": "user4",
+            "senderId": "user1",
             "content": "Are we ready for the presentation?",
-            "timestamp": "2024-12-21T09:30:00Z"
+            "timestamp": "2024-12-21T09:30:00Z",
+            "messageType": "text"
           }
         ],
         "lastMessage": {
           "id": "msg3",
-          "senderId": "user4",
+          "senderId": "user2",
           "content": "Are we ready for the presentation?",
-          "timestamp": "2024-12-21T09:30:00Z"
+          "timestamp": "2024-12-21T09:30:00Z",
+          "messageType": "text"
         },
         "unreadMessageCount": 3,
         "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"
@@ -218,20 +335,23 @@
               "id": "msg1",
               "senderId": "user1",
               "content": "Hello everyone!",
-              "timestamp": "2024-12-21T10:00:00Z"
+              "timestamp": "2024-12-21T10:00:00Z",
+              "messageType": "text"
             },
             {
               "id": "msg2",
               "senderId": "user2",
               "content": "Hi Alice!",
-              "timestamp": "2024-12-21T10:01:00Z"
+              "timestamp": "2024-12-21T10:01:00Z",
+              "messageType": "text"
             }
           ],
           "lastMessage": {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-21T10:01:00Z"
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
           },
           "unreadMessageCount": 1,
           "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
@@ -249,20 +369,23 @@
               "id": "msg1",
               "senderId": "user1",
               "content": "Hello everyone!",
-              "timestamp": "2024-12-21T10:00:00Z"
+              "timestamp": "2024-12-21T10:00:00Z",
+              "messageType": "text"
             },
             {
               "id": "msg2",
               "senderId": "user2",
               "content": "Hi Alice!",
-              "timestamp": "2024-12-21T10:01:00Z"
+              "timestamp": "2024-12-21T10:01:00Z",
+              "messageType": "text"
             }
           ],
           "lastMessage": {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-30T10:01:00Z"
+            "timestamp": "2024-12-30T10:01:00Z",
+            "messageType": "text"
           },
           "unreadMessageCount": 1,
           "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg",
@@ -280,20 +403,23 @@
               "id": "msg1",
               "senderId": "user1",
               "content": "Hello everyone!",
-              "timestamp": "2024-12-21T10:00:00Z"
+              "timestamp": "2024-12-21T10:00:00Z",
+              "messageType": "text"
             },
             {
               "id": "msg2",
               "senderId": "user2",
               "content": "Hi Alice!",
-              "timestamp": "2024-12-21T10:01:00Z"
+              "timestamp": "2024-12-21T10:01:00Z",
+              "messageType": "text"
             }
           ],
           "lastMessage": {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-28T10:01:00Z"
+            "timestamp": "2024-12-28T10:01:00Z",
+            "messageType": "text"
           },
           "unreadMessageCount": 0,
           "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
@@ -311,20 +437,23 @@
               "id": "msg1",
               "senderId": "user1",
               "content": "Hello everyone!",
-              "timestamp": "2024-12-21T10:00:00Z"
+              "timestamp": "2024-12-21T10:00:00Z",
+              "messageType": "text"
             },
             {
               "id": "msg2",
               "senderId": "user2",
               "content": "Hi Alice!",
-              "timestamp": "2024-12-21T10:01:00Z"
+              "timestamp": "2024-12-21T10:01:00Z",
+              "messageType": "text"
             }
           ],
           "lastMessage": {
             "id": "msg2",
             "senderId": "user2",
             "content": "Hi Alice!",
-            "timestamp": "2024-12-21T10:01:00Z"
+            "timestamp": "2024-12-21T10:01:00Z",
+            "messageType": "text"
           },
           "unreadMessageCount": 0,
           "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
@@ -342,14 +471,16 @@
               "id": "msg3",
               "senderId": "user4",
               "content": "Are we ready for the presentation?",
-              "timestamp": "2024-12-21T09:30:00Z"
+              "timestamp": "2024-12-21T09:30:00Z",
+              "messageType": "text"
             }
           ],
           "lastMessage": {
             "id": "msg3",
             "senderId": "user4",
             "content": "Are we ready for the presentation?",
-            "timestamp": "2024-12-21T09:30:00Z"
+            "timestamp": "2024-12-21T09:30:00Z",
+            "messageType": "text"
           },
           "unreadMessageCount": 3,
           "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"
@@ -367,20 +498,23 @@
                 "id": "msg1",
                 "senderId": "user1",
                 "content": "Hello everyone!",
-                "timestamp": "2024-12-21T10:00:00Z"
+                "timestamp": "2024-12-21T10:00:00Z",
+                "messageType": "text"
               },
               {
                 "id": "msg2",
                 "senderId": "user2",
                 "content": "Hi Alice!",
-                "timestamp": "2024-12-21T10:01:00Z"
+                "timestamp": "2024-12-21T10:01:00Z",
+                "messageType": "text"
               }
             ],
             "lastMessage": {
               "id": "msg2",
               "senderId": "user2",
               "content": "Hi Alice!",
-              "timestamp": "2024-12-21T10:01:00Z"
+              "timestamp": "2024-12-21T10:01:00Z",
+              "messageType": "text"
             },
             "unreadMessageCount": 1,
             "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
@@ -398,20 +532,23 @@
                 "id": "msg1",
                 "senderId": "user1",
                 "content": "Hello everyone!",
-                "timestamp": "2024-12-21T10:00:00Z"
+                "timestamp": "2024-12-21T10:00:00Z",
+                "messageType": "text"
               },
               {
                 "id": "msg2",
                 "senderId": "user2",
                 "content": "Hi Alice!",
-                "timestamp": "2024-12-21T10:01:00Z"
+                "timestamp": "2024-12-21T10:01:00Z",
+                "messageType": "text"
               }
             ],
             "lastMessage": {
               "id": "msg2",
               "senderId": "user2",
               "content": "Hi Alice!",
-              "timestamp": "2024-12-30T10:01:00Z"
+              "timestamp": "2024-12-30T10:01:00Z",
+              "messageType": "text"
             },
             "unreadMessageCount": 1,
             "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg",
@@ -429,20 +566,23 @@
                 "id": "msg1",
                 "senderId": "user1",
                 "content": "Hello everyone!",
-                "timestamp": "2024-12-21T10:00:00Z"
+                "timestamp": "2024-12-21T10:00:00Z",
+                "messageType": "text"
               },
               {
                 "id": "msg2",
                 "senderId": "user2",
                 "content": "Hi Alice!",
-                "timestamp": "2024-12-21T10:01:00Z"
+                "timestamp": "2024-12-21T10:01:00Z",
+                "messageType": "text"
               }
             ],
             "lastMessage": {
               "id": "msg2",
               "senderId": "user2",
               "content": "Hi Alice!",
-              "timestamp": "2024-12-28T10:01:00Z"
+              "timestamp": "2024-12-28T10:01:00Z",
+              "messageType": "text"
             },
             "unreadMessageCount": 0,
             "thumbnailUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
