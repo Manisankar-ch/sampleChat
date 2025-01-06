@@ -40,4 +40,12 @@ struct Message: Codable {
     let senderId: String
     let content: String
     let timestamp: String
+    let messageType: MessageType
+}
+
+enum MessageType: String, Codable {
+    case text
+    case image
+    case video
+    case audio
 }
